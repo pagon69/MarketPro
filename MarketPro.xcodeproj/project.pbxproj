@@ -12,6 +12,9 @@
 		FC224FE921CD5BEB00C46E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC224FE721CD5BEB00C46E07 /* Main.storyboard */; };
 		FC224FEB21CD5BED00C46E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC224FEA21CD5BED00C46E07 /* Assets.xcassets */; };
 		FC224FEE21CD5BED00C46E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC224FEC21CD5BED00C46E07 /* LaunchScreen.storyboard */; };
+		FC224FF921CD5CAB00C46E07 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC224FF821CD5CAB00C46E07 /* DetailTableViewCell.swift */; };
+		FC224FFB21CD5CD600C46E07 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC224FFA21CD5CD600C46E07 /* Stock.swift */; };
+		FC224FFE21CD63B200C46E07 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC224FFD21CD63B200C46E07 /* WatchListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		FC224FEA21CD5BED00C46E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC224FED21CD5BED00C46E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC224FEF21CD5BED00C46E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC224FF821CD5CAB00C46E07 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		FC224FFA21CD5CD600C46E07 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		FC224FFD21CD63B200C46E07 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		FC224FE221CD5BEB00C46E07 /* MarketPro */ = {
 			isa = PBXGroup;
 			children = (
-				FC224FE321CD5BEB00C46E07 /* AppDelegate.swift */,
-				FC224FE521CD5BEB00C46E07 /* ViewController.swift */,
-				FC224FE721CD5BEB00C46E07 /* Main.storyboard */,
-				FC224FEA21CD5BED00C46E07 /* Assets.xcassets */,
-				FC224FEC21CD5BED00C46E07 /* LaunchScreen.storyboard */,
 				FC224FEF21CD5BED00C46E07 /* Info.plist */,
+				FC224FEA21CD5BED00C46E07 /* Assets.xcassets */,
+				FC224FFC21CD605700C46E07 /* View */,
+				FC224FF721CD5C7500C46E07 /* Model */,
+				FC224FF621CD5C6400C46E07 /* Controller */,
+				FC224FF521CD5C3100C46E07 /* SupportFiles */,
 			);
 			path = MarketPro;
+			sourceTree = "<group>";
+		};
+		FC224FF521CD5C3100C46E07 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FC224FE321CD5BEB00C46E07 /* AppDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		FC224FF621CD5C6400C46E07 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC224FE521CD5BEB00C46E07 /* ViewController.swift */,
+				FC224FF821CD5CAB00C46E07 /* DetailTableViewCell.swift */,
+				FC224FFD21CD63B200C46E07 /* WatchListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC224FF721CD5C7500C46E07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC224FFA21CD5CD600C46E07 /* Stock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC224FFC21CD605700C46E07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC224FE721CD5BEB00C46E07 /* Main.storyboard */,
+				FC224FEC21CD5BED00C46E07 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC224FF921CD5CAB00C46E07 /* DetailTableViewCell.swift in Sources */,
 				FC224FE621CD5BEB00C46E07 /* ViewController.swift in Sources */,
+				FC224FFB21CD5CD600C46E07 /* Stock.swift in Sources */,
+				FC224FFE21CD63B200C46E07 /* WatchListViewController.swift in Sources */,
 				FC224FE421CD5BEB00C46E07 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
