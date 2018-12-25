@@ -9,23 +9,40 @@
 import UIKit
 import AlamofireImage
 import Alamofire
+import SVProgressHUD
+import SwiftyJSON
+import GoogleMobileAds
 
-class MarketViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+class MarketViewController: UIViewController, UITableViewDataSource, UITableViewDelegate , GADBannerViewDelegate{
     
     //my global variables
-    let myArray = ["testing", "andy", "susan", "boob", "both"]
     
-    
+    var newsArray = [News]()
+    var marketDataArray = [Market]()
     let newsAPI = "https://api.iextrading.com/1.0/stock/market/news/last/5"
     let marketAPI = "https://api.iextrading.com/1.0/market"
     
     
     //outlets and more
     @IBOutlet weak var marketTableViewOutlet: UITableView!
+    @IBOutlet weak var imageViewOutlet: UIImageView!
+    @IBOutlet weak var headline: UILabel!
+    @IBOutlet weak var textFieldOutlet: UITextView!
+    @IBOutlet weak var newsSource: UILabel!
+    @IBOutlet weak var googBannerView: GADBannerView!
+    @IBOutlet weak var urlSources: UILabel!
+    
+    
+    
+    
+    
+    
+    
     
     //my tableView setup
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myArray.count
+        return marketDataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,8 +50,8 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = marketTableViewOutlet.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         
         
-        cell.detailTextLabel?.text = " testing"
-        cell.textLabel?.text = "another"
+        cell.detailTextLabel?.text = "Mic:\(marketDataArray[indexPath.row].mic)    Volume:\(marketDataArray[indexPath.row].volome)"
+        cell.textLabel?.text = "VenureName: \(marketDataArray[indexPath.row].venueName)"
         
         return cell
         
@@ -43,17 +60,101 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBOutlet weak var myimageview: UIImageView!
     
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        googBannerView.adUnitID = "ca-app-pub-7563192023707820/6176021227"
+        googBannerView.delegate = self
+        googBannerView.rootViewController = self
+        googBannerView.isAutoloadEnabled = true
+        
+        
+        SVProgressHUD.show()
         
       // myimageview.image = downloadIcon(imageURL: "https://storage.googleapis.com/iex/api/logos/FB.png")
-        myimageview.image = downloader()
+      //  myimageview.image = downloader()
+        
+        apiCalls(url: marketAPI)
+       // apiCalls(url: newsAPI)
+        
+        
     }
     
 
+    
+    
+    
+    func apiCalls(url: String){
+        
+        Alamofire.request(url, method: .get) //parameters can be placed after the get
+            .responseJSON { response in
+                if response.result.isSuccess {
+                    
+                    let returnedStockData : JSON = JSON(response.result.value!)
+                    
+                    self.processMarketData(jsonData: returnedStockData)
+   
+                    print(returnedStockData)
+                    
+                }else{
+                    
+                    print("somthing went wrong: \(String(describing: response.result.error))")
+                    
+                }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+   
+    func processMarketData(jsonData: JSON) {
+        
+        
+       
+        
+        for eachItem in jsonData.arrayValue{
+            
+            
+            let myMarketData = Market()
+            
+                myMarketData.mic = eachItem["mic"].stringValue
+                myMarketData.venueName = eachItem["venueName"].stringValue
+                myMarketData.volome = eachItem["volume"].stringValue
+                myMarketData.marketPercent = eachItem["marketPercent"].stringValue
+            
+            marketDataArray.append(myMarketData)
+        }
+        
+        
+        marketDataArray.remove(at: 0)
+        updateUIComponents()
+        
+    }
+    
+    
+    func updateUIComponents() {
+        
+        marketTableViewOutlet.reloadData()
+        SVProgressHUD.dismiss()
+        
+      //  headline.text =
+        
+        
+    }
+    
+    
     
     func downloadIcon(imageURL: String) -> UIImage?{
         

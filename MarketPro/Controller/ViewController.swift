@@ -12,8 +12,9 @@ import ScrollableGraphView
 import Alamofire
 import SVProgressHUD
 import AlamofireImage
+import GoogleMobileAds
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ScrollableGraphViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ScrollableGraphViewDataSource, GADBannerViewDelegate {
     
     
     //my global variables
@@ -24,6 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
+   // var bannerView: GADBannerView!
     
     var graphData = [Int]()
     var chartsGraphData = [Int]()
@@ -36,6 +38,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
+    
+    @IBOutlet weak var GoogBannerAD: GADBannerView!
     @IBOutlet weak var watchListTableView: UITableView!
     
     
@@ -108,6 +112,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         SVProgressHUD.show()
     
+        
+        //google ads
+        GoogBannerAD.adUnitID = "ca-app-pub-7563192023707820/8684884041"
+        GoogBannerAD.rootViewController = self
+        GoogBannerAD.delegate = self
+        GoogBannerAD.isAutoloadEnabled = true
         
         //Mark: - load defaults
         
