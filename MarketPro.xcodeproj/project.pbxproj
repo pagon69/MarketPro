@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F315D62C5D13411EEFA737D /* Pods_MarketPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F340A163DA37241A5A69C8B6 /* Pods_MarketPro.framework */; };
 		FC224FE421CD5BEB00C46E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC224FE321CD5BEB00C46E07 /* AppDelegate.swift */; };
 		FC224FE621CD5BEB00C46E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC224FE521CD5BEB00C46E07 /* ViewController.swift */; };
 		FC224FE921CD5BEB00C46E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC224FE721CD5BEB00C46E07 /* Main.storyboard */; };
 		FC224FEB21CD5BED00C46E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC224FEA21CD5BED00C46E07 /* Assets.xcassets */; };
 		FC224FEE21CD5BED00C46E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC224FEC21CD5BED00C46E07 /* LaunchScreen.storyboard */; };
-		FC224FF921CD5CAB00C46E07 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC224FF821CD5CAB00C46E07 /* DetailTableViewCell.swift */; };
 		FC224FFB21CD5CD600C46E07 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC224FFA21CD5CD600C46E07 /* Stock.swift */; };
-		FC224FFE21CD63B200C46E07 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC224FFD21CD63B200C46E07 /* WatchListViewController.swift */; };
+		FCE9A96021D1185E00BDC5DE /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A95F21D1185E00BDC5DE /* DetailTableViewCell.swift */; };
+		FCE9A96421D1223600BDC5DE /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A96321D1223600BDC5DE /* MarketViewController.swift */; };
+		FCE9A97421D1C51300BDC5DE /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A97321D1C51300BDC5DE /* Market.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4735015317FCF2F67974D8B /* Pods-MarketPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarketPro/Pods-MarketPro.release.xcconfig"; sourceTree = "<group>"; };
+		B0FE36919B16D161CA9F1DE9 /* Pods-MarketPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarketPro/Pods-MarketPro.debug.xcconfig"; sourceTree = "<group>"; };
+		F340A163DA37241A5A69C8B6 /* Pods_MarketPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarketPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC224FE021CD5BEB00C46E07 /* MarketPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC224FE321CD5BEB00C46E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC224FE521CD5BEB00C46E07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,9 +30,10 @@
 		FC224FEA21CD5BED00C46E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC224FED21CD5BED00C46E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC224FEF21CD5BED00C46E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC224FF821CD5CAB00C46E07 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		FC224FFA21CD5CD600C46E07 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
-		FC224FFD21CD63B200C46E07 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
+		FCE9A95F21D1185E00BDC5DE /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		FCE9A96321D1223600BDC5DE /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		FCE9A97321D1C51300BDC5DE /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F315D62C5D13411EEFA737D /* Pods_MarketPro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8288B2BAFA11210E4297370F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F340A163DA37241A5A69C8B6 /* Pods_MarketPro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C435CD58F62947F6A7531DB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0FE36919B16D161CA9F1DE9 /* Pods-MarketPro.debug.xcconfig */,
+				A4735015317FCF2F67974D8B /* Pods-MarketPro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FC224FD721CD5BEB00C46E07 = {
 			isa = PBXGroup;
 			children = (
 				FC224FE221CD5BEB00C46E07 /* MarketPro */,
 				FC224FE121CD5BEB00C46E07 /* Products */,
+				C435CD58F62947F6A7531DB7 /* Pods */,
+				8288B2BAFA11210E4297370F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,9 +107,9 @@
 		FC224FF621CD5C6400C46E07 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FCE9A96321D1223600BDC5DE /* MarketViewController.swift */,
 				FC224FE521CD5BEB00C46E07 /* ViewController.swift */,
-				FC224FF821CD5CAB00C46E07 /* DetailTableViewCell.swift */,
-				FC224FFD21CD63B200C46E07 /* WatchListViewController.swift */,
+				FCE9A95F21D1185E00BDC5DE /* DetailTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FC224FFA21CD5CD600C46E07 /* Stock.swift */,
+				FCE9A97321D1C51300BDC5DE /* Market.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC224FF221CD5BED00C46E07 /* Build configuration list for PBXNativeTarget "MarketPro" */;
 			buildPhases = (
+				E8E33A99C8D6B0B73F276D2F /* [CP] Check Pods Manifest.lock */,
 				FC224FDC21CD5BEB00C46E07 /* Sources */,
 				FC224FDD21CD5BEB00C46E07 /* Frameworks */,
 				FC224FDE21CD5BEB00C46E07 /* Resources */,
+				FC181BE6C50D93FCDE587B95 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,16 +200,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E8E33A99C8D6B0B73F276D2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarketPro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC181BE6C50D93FCDE587B95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MarketPro/Pods-MarketPro-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarketPro/Pods-MarketPro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC224FDC21CD5BEB00C46E07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC224FF921CD5CAB00C46E07 /* DetailTableViewCell.swift in Sources */,
 				FC224FE621CD5BEB00C46E07 /* ViewController.swift in Sources */,
 				FC224FFB21CD5CD600C46E07 /* Stock.swift in Sources */,
-				FC224FFE21CD63B200C46E07 /* WatchListViewController.swift in Sources */,
+				FCE9A96421D1223600BDC5DE /* MarketViewController.swift in Sources */,
+				FCE9A96021D1185E00BDC5DE /* DetailTableViewCell.swift in Sources */,
 				FC224FE421CD5BEB00C46E07 /* AppDelegate.swift in Sources */,
+				FCE9A97421D1C51300BDC5DE /* Market.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +409,7 @@
 		};
 		FC224FF321CD5BED00C46E07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0FE36919B16D161CA9F1DE9 /* Pods-MarketPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -342,6 +428,7 @@
 		};
 		FC224FF421CD5BED00C46E07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4735015317FCF2F67974D8B /* Pods-MarketPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -6,6 +6,7 @@
 //  Copyright © 2018 AlleyneVentures. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 class Stock {
@@ -31,10 +32,21 @@ class Stock {
     var iexLatestUpdate = "-"
     var delayedPrice = "-"
     var delayedPriceTime = "-"
+    var extendedPrice = "-"
+    var extentedChangePercent = "-"
+    var extendedChange = "-"
+    var extendedPriceTime = "-"
+    var previousClose = "-"
+    var iexMarketPercent = "-"
     var change = "-"
     var changePercent = "-"
     var iexVolume = "-"
     var avgTotalVolume = "-"
+    var iexBidPrice = "-"
+    var iexBidSize = "-"
+    var iexAskPrice = "-"
+    var iexAskSize = "-"
+    var marketCap = "-"
     var peRation = "-"
     var week52High = "-"
     var week52Low = "-"
@@ -43,5 +55,9 @@ class Stock {
     var bidSize = "-"
     var askPrice = "-"
     var askSize = "-"
-    
+    var logo = "-"
+    var chartDataArray = [Int]()
+    var chartDatesArray = [String]()
+    var myDate = "-"
+    var myLogo : UIImage? = UIImage(named: "3")
 }
