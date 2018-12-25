@@ -136,7 +136,6 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="4uD-69-nKH" firstAttribute="leading" secondItem="V2P-D5-XaH" secondAttribute="leading" id="11O-rC-5C9"/>
                                             <constraint firstItem="eOE-lz-5tD" firstAttribute="top" secondItem="V2P-D5-XaH" secondAttribute="top" id="3gt-h6-LaI"/>
@@ -289,10 +288,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gr2-wF-ddK" userLabel="details container">
-                                                    <rect key="frame" x="20" y="11" width="374" height="60"/>
+                                                    <rect key="frame" x="20" y="11" width="335" height="60"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epH-q4-rBw" userLabel="nameDetailcontainer">
-                                                            <rect key="frame" x="74" y="4" width="292" height="25"/>
+                                                            <rect key="frame" x="35" y="4" width="292" height="25"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxE-fC-XCM">
                                                                     <rect key="frame" x="8" y="2" width="276" height="21"/>
@@ -310,7 +309,7 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8q-Ne-Fkh" userLabel="label Detail container">
-                                                            <rect key="frame" x="74" y="30" width="292" height="25"/>
+                                                            <rect key="frame" x="35" y="30" width="292" height="25"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55x-y2-z2q">
                                                                     <rect key="frame" x="8" y="2" width="276" height="21"/>
@@ -328,10 +327,10 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHh-cH-N4Y" userLabel="picture container">
-                                                            <rect key="frame" x="8" y="4" width="62" height="52"/>
+                                                            <rect key="frame" x="8" y="4" width="23" height="52"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W1c-oP-enn">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="62" height="52"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="23" height="52"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -364,10 +363,10 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XdJ-ML-bdK" userLabel="graph container">
-                                                    <rect key="frame" x="20" y="79" width="336" height="130"/>
+                                                    <rect key="frame" x="20" y="79" width="297" height="130"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IU8-yi-9ES" userLabel="buttons Container">
-                                                    <rect key="frame" x="364" y="79" width="30" height="130"/>
+                                                    <rect key="frame" x="325" y="79" width="30" height="130"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg0-qD-hLh">
                                                             <rect key="frame" x="0.0" y="52" width="30" height="27"/>

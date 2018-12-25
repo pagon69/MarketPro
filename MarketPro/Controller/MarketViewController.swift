@@ -18,8 +18,9 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     
     //my global variables
     
-    var newsArray = [News]()
+    
     var marketDataArray = [Market]()
+    var newsDataArray = [News]()
     let newsAPI = "https://api.iextrading.com/1.0/stock/market/news/last/5"
     let marketAPI = "https://api.iextrading.com/1.0/market"
     
@@ -83,7 +84,7 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
       //  myimageview.image = downloader()
         
         apiCalls(url: marketAPI)
-       // apiCalls(url: newsAPI)
+        apiCallTwo(url: newsAPI)
         
         
     }
@@ -113,16 +114,29 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
+    func apiCallTwo(url: String){
+        
+        Alamofire.request(url, method: .get) //parameters can be placed after the get
+            .responseJSON { response in
+                if response.result.isSuccess {
+                    
+                    let returnedStockData : JSON = JSON(response.result.value!)
+                    
+                    self.processMarketDataTwo(jsonData: returnedStockData)
+                    
+                    print(returnedStockData)
+                    
+                }else{
+                    
+                    print("somthing went wrong: \(String(describing: response.result.error))")
+                    
+                }
+        }
+    }
     
     
-    
-    
-    
-   
     func processMarketData(jsonData: JSON) {
         
-        
-       
         
         for eachItem in jsonData.arrayValue{
             
@@ -137,19 +151,52 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
             marketDataArray.append(myMarketData)
         }
         
-        
-        marketDataArray.remove(at: 0)
+       // marketDataArray.remove(at: 0)
         updateUIComponents()
         
     }
     
+    
+    func processMarketDataTwo(jsonData: JSON) {
+        
+        for eachItem in jsonData.arrayValue{
+            
+            
+            let myMarketData = News()
+            
+            myMarketData.headline = eachItem["headline"].stringValue
+            myMarketData.imageURL = eachItem["image"].stringValue
+            myMarketData.source = eachItem["source"].stringValue
+            myMarketData.summary = eachItem["summary"].stringValue
+            myMarketData.url = eachItem["url"].stringValue
+            
+            newsDataArray.append(myMarketData)
+        }
+        
+       // newsDataArray.remove(at: 0)
+        updateUIComponentsTwo()
+        
+    }
     
     func updateUIComponents() {
         
         marketTableViewOutlet.reloadData()
         SVProgressHUD.dismiss()
         
-      //  headline.text =
+    }
+    
+    
+    func updateUIComponentsTwo() {
+        
+        marketTableViewOutlet.reloadData()
+        SVProgressHUD.dismiss()
+        
+        headline.text = newsDataArray[0].headline
+       // imageViewOutlet.image = newsDataArray[0].imageURL
+        newsSource.text = newsDataArray[0].source
+        urlSources.text = newsDataArray[0].url
+        urlSources.text = newsDataArray[0].url
+        textFieldOutlet.text = newsDataArray[0].summary
         
         
     }
