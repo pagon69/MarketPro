@@ -19,6 +19,8 @@
 		FCE9A97421D1C51300BDC5DE /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A97321D1C51300BDC5DE /* Market.swift */; };
 		FCE9A97621D1DDBF00BDC5DE /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A97521D1DDBF00BDC5DE /* DiscoverViewController.swift */; };
 		FCE9A97821D1E44A00BDC5DE /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A97721D1E44A00BDC5DE /* News.swift */; };
+		FCE9A97A21D25FA000BDC5DE /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A97921D25FA000BDC5DE /* CryptoViewController.swift */; };
+		FCE9A97C21D299A200BDC5DE /* Sectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A97B21D299A200BDC5DE /* Sectors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		FCE9A97321D1C51300BDC5DE /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		FCE9A97521D1DDBF00BDC5DE /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		FCE9A97721D1E44A00BDC5DE /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		FCE9A97921D25FA000BDC5DE /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
+		FCE9A97B21D299A200BDC5DE /* Sectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sectors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				FC224FE521CD5BEB00C46E07 /* ViewController.swift */,
 				FCE9A95F21D1185E00BDC5DE /* DetailTableViewCell.swift */,
 				FCE9A97521D1DDBF00BDC5DE /* DiscoverViewController.swift */,
+				FCE9A97921D25FA000BDC5DE /* CryptoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				FC224FFA21CD5CD600C46E07 /* Stock.swift */,
 				FCE9A97321D1C51300BDC5DE /* Market.swift */,
 				FCE9A97721D1E44A00BDC5DE /* News.swift */,
+				FCE9A97B21D299A200BDC5DE /* Sectors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +280,8 @@
 				FCE9A97821D1E44A00BDC5DE /* News.swift in Sources */,
 				FC224FE421CD5BEB00C46E07 /* AppDelegate.swift in Sources */,
 				FCE9A97421D1C51300BDC5DE /* Market.swift in Sources */,
+				FCE9A97A21D25FA000BDC5DE /* CryptoViewController.swift in Sources */,
+				FCE9A97C21D299A200BDC5DE /* Sectors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

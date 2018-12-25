@@ -36,6 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     let defaultURL = "https://api.iextrading.com/1.0/stock/market/batch?symbols="
     
+    var userSearchURL = "https://api.iextrading.com/1.0/stock/market/batch?symbols=aapl&types=quote,logo,news,chart&range=1m"
     
     
     
@@ -153,7 +154,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             wathListItems = wathListItems + "\(eachItem)" + ","
         }
         
-        let createURL = "\(wathListItems)&types=quote,logo,news,chart&range=6m"
+        let createURL = "\(wathListItems)&types=quote,logo,news,chart&range=3m"
         let finalURL = url + createURL
         
         print(finalURL)
@@ -285,8 +286,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func createGraphs(dataToPlot : [Int], numberOfPointsToPlot : Int) -> UIView {
         let graphView = ScrollableGraphView(frame: CGRect(x: 0, y: 0, width: 336, height: 130), dataSource: self)
-        
-        
+
         
         let linePlot = LinePlot(identifier: "line")
         let referenceLines = ReferenceLines()
@@ -322,7 +322,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         referenceLines.positionType = .absolute
         // Reference lines will be shown at these values on the y-axis.
-        referenceLines.absolutePositions = [50,100,150,200,250,500,1000]
+        referenceLines.absolutePositions = [100,150,200,250,500,1000]
         referenceLines.includeMinMax = false
         
         referenceLines.dataPointLabelColor = UIColor.white.withAlphaComponent(0.5)
