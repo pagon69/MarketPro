@@ -249,7 +249,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Market" id="SwP-jj-5s8"/>
+                    <tabBarItem key="tabBarItem" title="Market" image="7" id="SwP-jj-5s8"/>
                     <connections>
                         <outlet property="googBannerView" destination="Diz-cw-Zfw" id="5Nf-dc-wPP"/>
                         <outlet property="headline" destination="baB-Kl-RKU" id="QnN-k1-Mix"/>
@@ -487,7 +487,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9nq-z7-zea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Watchlist" id="QIp-aY-J6c"/>
+                    <tabBarItem key="tabBarItem" title="Watchlist" image="4" id="QIp-aY-J6c"/>
                     <connections>
                         <outlet property="GoogBannerAD" destination="JSo-ZT-i0o" id="bKR-YO-es9"/>
                         <outlet property="watchListTableView" destination="NO4-B6-keA" id="zvU-6Y-43x"/>
@@ -591,7 +591,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bep-HW-SA6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Crytpo" id="lAg-1e-fed"/>
+                    <tabBarItem key="tabBarItem" title="Crytpo" image="5" id="lAg-1e-fed"/>
                     <connections>
                         <outlet property="googBannerOutlet" destination="Gip-U6-1dQ" id="IFH-fX-D29"/>
                         <outlet property="searchBarOutlet" destination="2aC-o5-Q3c" id="Hk6-ET-JDX"/>
@@ -726,7 +726,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kLw-Yf-uVr"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Discover" id="CTo-Qt-Bpa"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="6" id="CTo-Qt-Bpa"/>
                     <connections>
                         <outlet property="googBannerAD" destination="Ku0-7q-yzF" id="cLG-zy-hC0"/>
                         <outlet property="tableviewOutlet" destination="uTN-Wi-ASb" id="Lh0-ku-dhc"/>
@@ -758,4 +758,10 @@
             <point key="canvasLocation" x="132" y="173.16341829085459"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="4" width="23" height="28"/>
+        <image name="5" width="27" height="29"/>
+        <image name="6" width="18" height="21"/>
+        <image name="7" width="15" height="27"/>
+    </resources>
 </document>
