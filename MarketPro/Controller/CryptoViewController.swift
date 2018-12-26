@@ -37,7 +37,7 @@ class CryptoViewController: UIViewController, GADBannerViewDelegate, UITableView
     
         //global variables
     var listCryptoArray = [Stock]()
-    
+    var userProvidedData = "-"
     
     
     
@@ -74,13 +74,20 @@ class CryptoViewController: UIViewController, GADBannerViewDelegate, UITableView
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        if let search = searchBar.text{
-            
-            let VC : SearchViewController = SearchViewController()
-            
-            VC.userSearchString = search
-            
-            performSegue(withIdentifier: "searchView", sender: self)
+        if let text = searchBar.text {
+            userProvidedData = text
+        }
+        
+        performSegue(withIdentifier: "searchViewCrypto", sender: self)
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "searchViewCrypto" {
+            let newVC = segue.destination as! SearchViewController
+            newVC.userSearchString = userProvidedData
         }
         
     }

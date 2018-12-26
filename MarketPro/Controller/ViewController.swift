@@ -38,6 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var userSearchURL = "https://api.iextrading.com/1.0/stock/market/batch?symbols=aapl&types=quote,logo,news,chart&range=1m"
     
+    var userProvidedData = "-"
     
     
     @IBOutlet weak var GoogBannerAD: GADBannerView!
@@ -141,17 +142,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        if let search = searchBar.text{
-            
-            let VC : SearchViewController = SearchViewController()
-            
-            VC.userSearchString = search
-            
-            performSegue(withIdentifier: "searchView", sender: self)
+        if let text = searchBar.text {
+            userProvidedData = text
         }
+        
+        performSegue(withIdentifier: "searchViewWatchList", sender: self)
+    
         
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "searchViewWatchList" {
+            let newVC = segue.destination as! SearchViewController
+            newVC.userSearchString = userProvidedData
+        }
+        
+    }
     
     
     

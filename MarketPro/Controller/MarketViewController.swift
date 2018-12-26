@@ -24,6 +24,7 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     let newsAPI = "https://api.iextrading.com/1.0/stock/market/news/last/5"
     let marketAPI = "https://api.iextrading.com/1.0/market"
     
+    var userProvidedData = "-"
     
     //outlets and more
     @IBOutlet weak var marketTableViewOutlet: UITableView!
@@ -253,18 +254,23 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        if let search = searchBar.text{
-            
-            let VC : SearchViewController = SearchViewController()
-            
-            VC.userSearchString = search
-            
-            performSegue(withIdentifier: "searchView", sender: self)
+        if let text = searchBar.text {
+            userProvidedData = text
         }
+        
+        performSegue(withIdentifier: "searchViewMarket", sender: self)
+        
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "searchViewMarket" {
+            let newVC = segue.destination as! SearchViewController
+            newVC.userSearchString = userProvidedData
+        }
+        
+    }
     
     
     

@@ -35,6 +35,7 @@ class DiscoverViewController: UIViewController, GADBannerViewDelegate, UITableVi
     
     //global variables
     var sectorArray = [Sectors]()
+    var userProvidedData = "-"
     
     var sectorURL = "https://api.iextrading.com/1.0//stock/market/sector-performance"
     var upComingIPO = "https://api.iextrading.com/1.0/stock/market/upcoming-ipos"
@@ -77,13 +78,20 @@ class DiscoverViewController: UIViewController, GADBannerViewDelegate, UITableVi
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        if let search = searchBar.text{
-            
-            let VC : SearchViewController = SearchViewController()
-            
-            VC.userSearchString = search
-            
-            performSegue(withIdentifier: "searchView", sender: self)
+        if let text = searchBar.text {
+            userProvidedData = text
+        }
+        
+        performSegue(withIdentifier: "searchViewDiscover", sender: self)
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "searchViewDiscover" {
+            let newVC = segue.destination as! SearchViewController
+            newVC.userSearchString = userProvidedData
         }
         
     }

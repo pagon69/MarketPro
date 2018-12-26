@@ -22,6 +22,9 @@
 		FCE9A97821D1E44A00BDC5DE /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A97721D1E44A00BDC5DE /* News.swift */; };
 		FCE9A97A21D25FA000BDC5DE /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A97921D25FA000BDC5DE /* CryptoViewController.swift */; };
 		FCE9A97C21D299A200BDC5DE /* Sectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A97B21D299A200BDC5DE /* Sectors.swift */; };
+		FCF63C9B21D3534B0082D3D2 /* dividend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF63C9A21D3534B0082D3D2 /* dividend.swift */; };
+		FCF63C9D21D353DD0082D3D2 /* Earnings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF63C9C21D353DD0082D3D2 /* Earnings.swift */; };
+		FCF63C9F21D354F20082D3D2 /* Financials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF63C9E21D354F20082D3D2 /* Financials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		FCE9A97721D1E44A00BDC5DE /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		FCE9A97921D25FA000BDC5DE /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
 		FCE9A97B21D299A200BDC5DE /* Sectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sectors.swift; sourceTree = "<group>"; };
+		FCF63C9A21D3534B0082D3D2 /* dividend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dividend.swift; sourceTree = "<group>"; };
+		FCF63C9C21D353DD0082D3D2 /* Earnings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earnings.swift; sourceTree = "<group>"; };
+		FCF63C9E21D354F20082D3D2 /* Financials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Financials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,9 @@
 				FCE9A97321D1C51300BDC5DE /* Market.swift */,
 				FCE9A97721D1E44A00BDC5DE /* News.swift */,
 				FCE9A97B21D299A200BDC5DE /* Sectors.swift */,
+				FCF63C9A21D3534B0082D3D2 /* dividend.swift */,
+				FCF63C9C21D353DD0082D3D2 /* Earnings.swift */,
+				FCF63C9E21D354F20082D3D2 /* Financials.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,11 +284,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF63C9B21D3534B0082D3D2 /* dividend.swift in Sources */,
 				FC224FE621CD5BEB00C46E07 /* ViewController.swift in Sources */,
 				FC2AD4FE21D2C7CD003F3ACF /* SearchViewController.swift in Sources */,
 				FC224FFB21CD5CD600C46E07 /* Stock.swift in Sources */,
 				FCE9A97621D1DDBF00BDC5DE /* DiscoverViewController.swift in Sources */,
+				FCF63C9F21D354F20082D3D2 /* Financials.swift in Sources */,
 				FCE9A96421D1223600BDC5DE /* MarketViewController.swift in Sources */,
+				FCF63C9D21D353DD0082D3D2 /* Earnings.swift in Sources */,
 				FCE9A96021D1185E00BDC5DE /* DetailTableViewCell.swift in Sources */,
 				FCE9A97821D1E44A00BDC5DE /* News.swift in Sources */,
 				FC224FE421CD5BEB00C46E07 /* AppDelegate.swift in Sources */,
