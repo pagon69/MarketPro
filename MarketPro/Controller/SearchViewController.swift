@@ -1,5 +1,5 @@
 //
-//  CryptoViewController.swift
+//  SearchViewController.swift
 //  MarketPro
 //
 //  Created by Andy Alleyne on 12/25/18.
@@ -8,88 +8,48 @@
 
 import UIKit
 import GoogleMobileAds
-import SwiftyJSON
 import Alamofire
+import SwiftyJSON
+import SVProgressHUD
 
-class CryptoViewController: UIViewController, GADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-    
-        //tableview setup
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listCryptoArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        
-        cell.detailTextLabel?.text = "$\(listCryptoArray[indexPath.row].latestPrice)  Change:\(listCryptoArray[indexPath.row].change)"
-        cell.textLabel?.text = "\(listCryptoArray[indexPath.row].companyName)   -- \(listCryptoArray[indexPath.row].symbol)"
-        
-        
-        
-        return cell
-    }
-    
 
-    
-    var baseURL = "https://api.iextrading.com/1.0/stock/market/crypto"
-    
-    
-        //global variables
-    var listCryptoArray = [Stock]()
-    
-    
-    
-    
+class SearchViewController: UIViewController {
+
+    //passed values
+    var userSearchString = "-"
+    let myStock = Stock()
+    let myMarket = Market()
+    let myNews = News()
+    let mySector = Sectors()
     
     
+    //global variables
     
-    @IBOutlet weak var googBannerOutlet: GADBannerView!
-    
-    @IBOutlet weak var searchBarOutlet: UISearchBar!
-    
-    @IBOutlet weak var tableViewOutlet: UITableView!
-    
+    var providedDataArray = [Stock]()
+    var userSearchURL = "https://api.iextrading.com/1.0/stock/market/batch?symbols="
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //validate what was sent
         
-        googBannerOutlet.adUnitID = "ca-app-pub-7563192023707820/3854213861"
-        googBannerOutlet.rootViewController = self
-        googBannerOutlet.delegate = self
-        googBannerOutlet.isAutoloadEnabled = true
-        
-        apiCalls(url: baseURL)
-        
-        
-    }
-    
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // use this with firebase, realm or file search
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        if let search = searchBar.text{
-            
-            let VC : SearchViewController = SearchViewController()
-            
-            VC.userSearchString = search
-            
-            performSegue(withIdentifier: "searchView", sender: self)
+        if userSearchString != "-" {
+            apiCalls(url: userSearchURL)
         }
         
+        
     }
     
-    
 
+    
     func apiCalls(url: String){
         
-        Alamofire.request(url, method: .get) //parameters can be placed after the get
+        
+        let addon = "&types=quote,logo"
+        let finalURL = "\(url)\(userSearchString)\(addon)"
+        
+        Alamofire.request(finalURL, method: .get) //parameters can be placed after the get
             .responseJSON { response in
                 if response.result.isSuccess {
                     
@@ -145,7 +105,7 @@ class CryptoViewController: UIViewController, GADBannerViewDelegate, UITableView
             myMarketData.askSize = eachItem["askSize"].stringValue
             
             
-            listCryptoArray.append(myMarketData)
+            providedDataArray.append(myMarketData)
         }
         
         // marketDataArray.remove(at: 0)
@@ -156,12 +116,9 @@ class CryptoViewController: UIViewController, GADBannerViewDelegate, UITableView
     
     func updateUIComponents() {
         
-        tableViewOutlet.reloadData()
+       // tableViewOutlet.reloadData()
     }
     
     
     
-    
-   
-
 }

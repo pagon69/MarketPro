@@ -14,6 +14,7 @@
 		FC224FEB21CD5BED00C46E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC224FEA21CD5BED00C46E07 /* Assets.xcassets */; };
 		FC224FEE21CD5BED00C46E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC224FEC21CD5BED00C46E07 /* LaunchScreen.storyboard */; };
 		FC224FFB21CD5CD600C46E07 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC224FFA21CD5CD600C46E07 /* Stock.swift */; };
+		FC2AD4FE21D2C7CD003F3ACF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2AD4FD21D2C7CD003F3ACF /* SearchViewController.swift */; };
 		FCE9A96021D1185E00BDC5DE /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A95F21D1185E00BDC5DE /* DetailTableViewCell.swift */; };
 		FCE9A96421D1223600BDC5DE /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A96321D1223600BDC5DE /* MarketViewController.swift */; };
 		FCE9A97421D1C51300BDC5DE /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9A97321D1C51300BDC5DE /* Market.swift */; };
@@ -35,6 +36,7 @@
 		FC224FED21CD5BED00C46E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC224FEF21CD5BED00C46E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC224FFA21CD5CD600C46E07 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		FC2AD4FD21D2C7CD003F3ACF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FCE9A95F21D1185E00BDC5DE /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		FCE9A96321D1223600BDC5DE /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 		FCE9A97321D1C51300BDC5DE /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				FCE9A95F21D1185E00BDC5DE /* DetailTableViewCell.swift */,
 				FCE9A97521D1DDBF00BDC5DE /* DiscoverViewController.swift */,
 				FCE9A97921D25FA000BDC5DE /* CryptoViewController.swift */,
+				FC2AD4FD21D2C7CD003F3ACF /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC224FE621CD5BEB00C46E07 /* ViewController.swift in Sources */,
+				FC2AD4FE21D2C7CD003F3ACF /* SearchViewController.swift in Sources */,
 				FC224FFB21CD5CD600C46E07 /* Stock.swift in Sources */,
 				FCE9A97621D1DDBF00BDC5DE /* DiscoverViewController.swift in Sources */,
 				FCE9A96421D1223600BDC5DE /* MarketViewController.swift in Sources */,

@@ -14,7 +14,7 @@ import SVProgressHUD
 import AlamofireImage
 import GoogleMobileAds
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ScrollableGraphViewDataSource, GADBannerViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ScrollableGraphViewDataSource, GADBannerViewDelegate, UISearchBarDelegate {
     
     
     //my global variables
@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.stockDetailLabel.text = "$\(processedWatchList[indexPath.row].latestPrice)  Chg:\(processedWatchList[indexPath.row].change)  P/E:\(processedWatchList[indexPath.row].peRation)"
         
         //cell.symbolImage.image =
-     //   cell.symbolImage.image = processedWatchList[indexPath.row].myLogo
+        cell.symbolImage.image = processedWatchList[indexPath.row].myLogo
         
         graphData = processedWatchList[indexPath.row].chartDataArray
         
@@ -114,6 +114,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         SVProgressHUD.show()
     
         
+        
         //google ads
         GoogBannerAD.adUnitID = "ca-app-pub-7563192023707820/8684884041"
         GoogBannerAD.rootViewController = self
@@ -132,6 +133,49 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //defaults.set(watchList, forKey: "userWatchList")
     }
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // use this with firebase, realm or file search
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        if let search = searchBar.text{
+            
+            let VC : SearchViewController = SearchViewController()
+            
+            VC.userSearchString = search
+            
+            performSegue(withIdentifier: "searchView", sender: self)
+        }
+        
+    }
+    
+    
+    
+    
+    
+    func updateImage(companyImage : String) {
+        let url = "https://storage.googleapis.com/iex/api/logos/FB.png"
+        
+        
+        
+        Alamofire.request(url).responseImage { response in
+         //   debugPrint(response)
+          //  print(response.request)
+          //  print(response.response)
+           // debugPrint(response.result)
+            
+            if let image = response.result.value {
+                
+             //   self.iconImageView.image = image
+                print("image downloaded: \(image)")
+            }
+        }
+        
+    }
+    
     
     
     func saveItemToWatchlist(userSelected: String) {

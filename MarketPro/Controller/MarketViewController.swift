@@ -14,7 +14,7 @@ import SwiftyJSON
 import GoogleMobileAds
 
 
-class MarketViewController: UIViewController, UITableViewDataSource, UITableViewDelegate , GADBannerViewDelegate{
+class MarketViewController: UIViewController, UITableViewDataSource, UITableViewDelegate , GADBannerViewDelegate, UISearchBarDelegate{
     
     //my global variables
     
@@ -247,6 +247,22 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // use this with firebase, realm or file search
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        if let search = searchBar.text{
+            
+            let VC : SearchViewController = SearchViewController()
+            
+            VC.userSearchString = search
+            
+            performSegue(withIdentifier: "searchView", sender: self)
+        }
+        
+    }
     
     
     

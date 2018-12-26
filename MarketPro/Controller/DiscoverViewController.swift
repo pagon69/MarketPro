@@ -11,7 +11,7 @@ import GoogleMobileAds
 import SwiftyJSON
 import Alamofire
 
-class DiscoverViewController: UIViewController, GADBannerViewDelegate, UITableViewDataSource, UITableViewDelegate{
+class DiscoverViewController: UIViewController, GADBannerViewDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
     
     
 
@@ -69,6 +69,25 @@ class DiscoverViewController: UIViewController, GADBannerViewDelegate, UITableVi
         
         
     }
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // use this with firebase, realm or file search
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        if let search = searchBar.text{
+            
+            let VC : SearchViewController = SearchViewController()
+            
+            VC.userSearchString = search
+            
+            performSegue(withIdentifier: "searchView", sender: self)
+        }
+        
+    }
+    
     
 
     func apiCalls(url: String){

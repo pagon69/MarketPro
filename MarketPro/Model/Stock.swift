@@ -59,5 +59,5 @@ class Stock {
     var chartDataArray = [Int]()
     var chartDatesArray = [String]()
     var myDate = "-"
-    var myLogo : UIImage? = UIImage(named: "3")
+    var myLogo : UIImage?
 }
